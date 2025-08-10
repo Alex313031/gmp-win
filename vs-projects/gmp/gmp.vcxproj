@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug dll|Win32">
+      <Configuration>Debug dll</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug dll|x64">
       <Configuration>Debug dll</Configuration>
       <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug lib|Win32">
+      <Configuration>Debug lib</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release dll|Win32">
+      <Configuration>Release dll</Configuration>
+      <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release dll|x64">
       <Configuration>Release dll</Configuration>
@@ -12,6 +24,10 @@
     <ProjectConfiguration Include="Debug lib|x64">
       <Configuration>Debug lib</Configuration>
       <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release lib|Win32">
+      <Configuration>Release lib</Configuration>
+      <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release lib|x64">
       <Configuration>Release lib</Configuration>
@@ -22,7 +38,6 @@
     <ClCompile Include="fib_table.c" />
     <ClCompile Include="mpn_sec_ops.c" />
     <ClCompile Include="mp_bases.c" />
-    
     <ClCompile Include="..\..\packages\gmp\assert.c" />
     <ClCompile Include="..\..\packages\gmp\compat.c" />
     <ClCompile Include="..\..\packages\gmp\errno.c" />
@@ -37,7 +52,6 @@
     <ClCompile Include="..\..\packages\gmp\mp_set_fns.c" />
     <ClCompile Include="..\..\packages\gmp\nextprime.c" />
     <ClCompile Include="..\..\packages\gmp\primesieve.c" />
-    
     <ClCompile Include="..\..\packages\gmp\scanf\fscanf.c" />
     <ClCompile Include="..\..\packages\gmp\scanf\fscanffuns.c" />
     <ClCompile Include="..\..\packages\gmp\scanf\scanf.c" />
@@ -48,7 +62,6 @@
     <ClCompile Include="..\..\packages\gmp\scanf\vsscanf.c" />
     <ClCompile Include="..\..\packages\gmp\tal-reent.c" />
     <ClCompile Include="..\..\packages\gmp\version.c" />
-    
     <ClCompile Include="..\..\packages\gmp\printf\asprintf.c" />
     <ClCompile Include="..\..\packages\gmp\printf\asprntffuns.c" />
     <ClCompile Include="..\..\packages\gmp\printf\doprnt.c" />
@@ -70,7 +83,6 @@
     <ClCompile Include="..\..\packages\gmp\printf\vprintf.c" />
     <ClCompile Include="..\..\packages\gmp\printf\vsnprintf.c" />
     <ClCompile Include="..\..\packages\gmp\printf\vsprintf.c" />
-    
     <ClCompile Include="..\..\packages\gmp\rand\rand.c" />
     <ClCompile Include="..\..\packages\gmp\rand\randbui.c" />
     <ClCompile Include="..\..\packages\gmp\rand\randclr.c" />
@@ -84,7 +96,6 @@
     <ClCompile Include="..\..\packages\gmp\rand\rands.c" />
     <ClCompile Include="..\..\packages\gmp\rand\randsd.c" />
     <ClCompile Include="..\..\packages\gmp\rand\randsdui.c" />
-    
     <ClCompile Include="..\..\packages\gmp\mpf\abs.c" />
     <ClCompile Include="..\..\packages\gmp\mpf\add.c" />
     <ClCompile Include="..\..\packages\gmp\mpf\add_ui.c" />
@@ -152,7 +163,6 @@
     <ClCompile Include="..\..\packages\gmp\mpf\ui_div.c" />
     <ClCompile Include="..\..\packages\gmp\mpf\ui_sub.c" />
     <ClCompile Include="..\..\packages\gmp\mpf\urandomb.c" />
-    
     <ClCompile Include="..\..\packages\gmp\mpn\generic\addmul_1.c" />
     <ClCompile Include="..\..\packages\gmp\mpn\generic\add_err1_n.c" />
     <ClCompile Include="..\..\packages\gmp\mpn\generic\add_err2_n.c" />
@@ -303,7 +313,6 @@
     <ClCompile Include="..\..\packages\gmp\mpn\generic\toom_interpolate_8pts.c" />
     <ClCompile Include="..\..\packages\gmp\mpn\generic\trialdiv.c" />
     <ClCompile Include="..\..\packages\gmp\mpn\generic\zero.c" />
-    
     <ClCompile Include="..\..\packages\gmp\mpn\generic\com.c">
       <ObjectFileName>$(IntDir)mpn_com.obj</ObjectFileName>
     </ClCompile>
@@ -361,7 +370,7 @@
     <ClCompile Include="..\..\packages\gmp\mpn\generic\rootrem.c">
       <ObjectFileName>$(IntDir)mpn_rootrem.obj</ObjectFileName>
     </ClCompile>
-        <ClCompile Include="..\..\packages\gmp\mpn\generic\scan0.c">
+    <ClCompile Include="..\..\packages\gmp\mpn\generic\scan0.c">
       <ObjectFileName>$(IntDir)mpn_scan0.obj</ObjectFileName>
     </ClCompile>
     <ClCompile Include="..\..\packages\gmp\mpn\generic\scan1.c">
@@ -379,7 +388,6 @@
     <ClCompile Include="..\..\packages\gmp\mpn\generic\tdiv_qr.c">
       <ObjectFileName>$(IntDir)mpn_tdiv_qr.obj</ObjectFileName>
     </ClCompile>
-    
     <ClCompile Include="..\..\packages\gmp\mpn\generic\add_1.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
@@ -422,7 +430,6 @@
     <ClCompile Include="..\..\packages\gmp\mpn\x86_64\fat\fat.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    
     <ClCompile Include="..\..\packages\gmp\mpq\abs.c">
       <ObjectFileName>$(IntDir)mpq_abs.obj</ObjectFileName>
     </ClCompile>
@@ -999,15 +1006,11 @@
     <ClCompile Include="..\..\packages\gmp\mpz\xor.c">
       <ObjectFileName>$(IntDir)mpz_xor.obj</ObjectFileName>
     </ClCompile>
-    
-    
     <ClCompile Include="..\..\packages\gmp\scanf\doscan.c">
       <ObjectFileName>$(IntDir)scanf_doscan.obj</ObjectFileName>
       <DisableSpecificWarnings>4244;4146;4267;4018;4334;4101</DisableSpecificWarnings>
     </ClCompile>
-    
   </ItemGroup>
-  
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -1022,7 +1025,19 @@
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug lib|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug dll|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug dll|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
@@ -1035,7 +1050,21 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release lib|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release dll|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release dll|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
@@ -1050,27 +1079,68 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug lib|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug lib|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug dll|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug dll|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release lib|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release lib|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release dll|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release dll|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug dll|x64'">
     <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug dll|Win32'">
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release dll|x64'">
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release dll|Win32'">
     <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug lib|x64'">
     <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
-  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug lib|Win32'">
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug lib|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>__GMP_WITHIN_GMP;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE
+;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\packages\gmp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4146;4267;4018;4334;4703</DisableSpecificWarnings>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug lib|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE
@@ -1121,7 +1191,60 @@
       </InputResourceManifests>
     </Manifest>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug dll|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>__GMP_WITHIN_GMP;__GMP_LIBGMP_DLL;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE
+;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\packages\gmp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4146;4267;4018;4334;4703</DisableSpecificWarnings>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)gmpdlld.lib</ImportLibrary>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+    <Manifest>
+      <InputResourceManifests>
+      </InputResourceManifests>
+    </Manifest>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release lib|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>__GMP_WITHIN_GMP;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\packages\gmp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4146;4267;4018;4334;4703</DisableSpecificWarnings>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release lib|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -1168,6 +1291,33 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <!--<ModuleDefinitionFile>$(ProjectDir)..\..\packages\zlib\win32\gmp.def</ModuleDefinitionFile>-->
+      <ImportLibrary>$(OutDir)gmpdll.lib</ImportLibrary>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release dll|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>__GMP_WITHIN_GMP;__GMP_LIBGMP_DLL;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\packages\gmp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4146;4267;4018;4334;4703</DisableSpecificWarnings>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>$(OutDir)gmpdll.lib</ImportLibrary>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
